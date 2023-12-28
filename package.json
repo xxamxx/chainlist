@@ -1,6 +1,6 @@
 {
   "name": "evm-chainlist",
-  "version": "1.0.0-beta.30",
+  "version": "1.0.0",
   "description": "This library for easy manage and access to EVM-based Chains information",
   "main": "dist/index.js",
   "repository": "https://github.com/xxamxx/chainlist.git",

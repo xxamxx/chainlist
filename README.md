@@ -3,8 +3,6 @@
 `chainlist` for easy manage and access to EVM-based Chains information
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/your-username/your-project/blob/master/LICENSE)
 
-> ⚠️ This package is still in the development stage, please do not use it in the production environment!!!
-
 ## Description
 
 the project is a library for interacting with metadata of the Chain. It provides a set of functions for reading metadata to the chain object, managing listings.
