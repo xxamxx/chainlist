@@ -11,8 +11,7 @@
   },
   "scripts": {
     "build": "rm -rf dist/* && tsc -p ./tsconfig.build.json",
-    "test": "jest --require=ts-node/register --require=tsconfig-paths/register",
-    "prepublish": "npm run test && npm run build"
+    "test": "jest --require=ts-node/register --require=tsconfig-paths/register"
   },
   "dependencies": {
     "json5": "^2.2.3",
