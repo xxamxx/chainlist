@@ -75,7 +75,11 @@ export function parseDecimalInt(v: string) {
   if(v.toLowerCase().indexOf("0b") == 0) return parseInt(v, 2);
   if(v.toLowerCase().indexOf("0o") == 0) return parseInt(v, 8);
   if(v.toLowerCase().indexOf("0") == 0) return parseInt(v, 8);
-  return v;
+  return parseInt(v, 10);
+}
+
+export function isInt(value: string) {
+  return !isNaN(parseDecimalInt(value));
 }
 
 export function equalInt(value1, value2) {
