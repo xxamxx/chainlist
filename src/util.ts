@@ -95,3 +95,38 @@ export function isIndexValue(value): value is ChainValue {
 export function isNil(value) {
   return value === null || typeof value === 'undefined'
 }
+
+/**
+ * Check if the environment is a
+ * Service worker
+ * @returns boolean
+ */
+export function isServiceWorker() {
+  if (typeof importScripts === "function") {
+    return true;
+  }
+  return false;
+}
+
+/**
+ * Check if the environment is Node.js
+ * @returns boolean
+ */
+export function isNodeJS() {
+  if (typeof process === "object" &&
+      typeof require === "function") {
+      return true;
+  }
+  return false;
+}
+
+/**
+ * Check if the environment is a Browser
+ * @returns boolean
+ */
+export function isBrowser() {
+  if (typeof window === "object") {
+      return true;
+  }
+  return false;
+}

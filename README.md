@@ -15,6 +15,7 @@ when your project need maintain multiple chain or access the metadata of chains,
 - Compatible fields
 - Flexible access
 - Extensible
+- Autoload the config file of chains(only Node.js)
 
 ## Installation
 
@@ -30,8 +31,8 @@ yarn add evm-chainlist
 
 ## Environment Variables
 
-- `EVM_CHAINLIST_DISABLE_AUTOLOAD` Disable autoload the data of chains, will export an empty instance of Chains.
-- `EVM_CHAINLIST_DATA_DIR` This contains the path to the directory containing your chains files, them will be autoload to instance of Chains, default read `process.cwd() + '/chains'` directory, the file extension can be `.json`, `.json5`, `.yaml`, `.yml`, **the chains data must includes `name` and `chainId` fields**;
+- `EVM_CHAINLIST_DISABLE_AUTOLOAD` Disable autoload the data of chains, will export an empty instance of Chains. *only Node.js environment*
+- `EVM_CHAINLIST_DATA_DIR` This contains the path to the directory containing your chains files, them will be autoload to instance of Chains, default read `process.cwd() + '/chains'` directory, the file extension can be `.json`, `.json5`, `.yaml`, `.yml`, **the chains data must includes `name` and `chainId` fields**. *only Node.js environment*
 
 ## Usage
 
