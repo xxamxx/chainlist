@@ -151,7 +151,7 @@ class BaseChain {
   }
 
   toString(): string {
-    return `${this.name}(${this.chainId})`;
+    return this.chainId + '';
   }
 }
 

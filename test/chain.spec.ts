@@ -82,7 +82,7 @@ describe('Chain', () => {
   describe('#toString()', () => {
     it('should return the ID of the metadata', () => {
       const chain = new Chain(data[0]);
-      expect(chain.toString()).toBe(`${data[0].name}(${data[0].chainId})`);
+      expect(chain.toString()).toBe(`${data[0].chainId}`);
     });
   });
 
@@ -92,7 +92,7 @@ describe('Chain', () => {
       expect(chain.is(data[0].name)).toBe(true);
       expect(chain.is(data[0].chainId)).toBe(true);
       expect(chain.is(data[0].networkId)).toBe(true);
-      expect(chain.is(`${data[0].name}(${data[0].chainId})`)).toBe(true);
+      expect(chain.is(data[0].chainId + '')).toBe(true);
     });
   });
 
@@ -110,7 +110,7 @@ describe('Chain', () => {
       expect(chain.equal(data[0].name)).toBe(true);
       expect(chain.equal(data[0].chainId)).toBe(true);
       expect(chain.equal(data[0].networkId)).toBe(true);
-      expect(chain.equal(`${data[0].name}(${data[0].chainId})`)).toBe(true);
+      expect(chain.equal(data[0].chainId + '')).toBe(true);
       
       expect(chain.equal(data[0].icon)).toBe(true);
       expect(chain.equal(data[0].nativeCurrency.symbol)).toBe(true);
