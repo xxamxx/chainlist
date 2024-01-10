@@ -1,7 +1,7 @@
 import get from "lodash.get";
 import { ChainOptions, ChainStatusType, ChainValue, Metadata, NativeCurrency } from "./common";
 import { S_CHAIN_FLAG, required } from "./constants";
-import { deepCopy, defineReadOnly, equalInt, isIndexValue, isInt, isNil, parseDecimalInt } from "./util";
+import { deepCopy, defineReadOnly, equalInt, isIndexValue, isNil, parseDecimalInt } from "./util";
 
 function getDefaultData() {
   return {
@@ -42,7 +42,7 @@ class BaseChain {
 
     properties.forEach((property) => {
       const value = this.metadata[property];
-      defineReadOnly<any, any>(this, property, isInt(String(value)) ? parseDecimalInt(String(value)) : value);
+      defineReadOnly<any, any>(this, property, value);
     });
 
     // 索引
