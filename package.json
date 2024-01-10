@@ -1,6 +1,6 @@
 {
   "name": "evm-chainlist",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "This library for easy manage and access to EVM-based Chains information",
   "main": "dist/index.js",
   "repository": "https://github.com/xxamxx/chainlist.git",
@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "rm -rf dist/* && tsc -p ./tsconfig.build.json",
-    "test": "jest --require=ts-node/register --require=tsconfig-paths/register"
+    "test": "jest --require=ts-node/register --require=tsconfig-paths/register",
+    "publish": "npm run build && npm publish ."
   },
   "dependencies": {
     "lodash.get": "^4.4.2"
